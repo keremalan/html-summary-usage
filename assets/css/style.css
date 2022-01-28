@@ -1,14 +1,80 @@
+header {
+    padding: 2vh 4vw;
+}
+
 nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-details {
-    display: inline;
-    margin-left: 3vw;
+
+main {
+    padding: 0 4vw;
 }
 
 .nav-link {
     display: flex;
     flex-direction: row;
+}
+
+
+.link > a:nth-child(2) {
+    display: inline-block;
+    padding-left: 1vw;
+}
+
+.fink {
+    display: inline-block;
+    padding-right: 4vw;
+    padding-left: 1vw;
+}
+
+details {
+    display: block;
+    position: absolute;
+}
+
+details[open] summary {
+    margin: 0;
+    padding: 0;
+}
+
+details[open] p {
+    animation: animateDown 0.2s linear forwards;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1641px) {
+    .fink {
+        padding-right: 7vw;
+    }
+}
+
+details > summary {
+    list-style: none;
+}
+
+@media only screen and (max-width: 980px) {
+    .fink {
+        padding-right: 8vw;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .fink {
+        padding-right: 12vw;
+    }
+}
+
+
+@keyframes animateDown {
+    0% {
+      opacity: 0;
+      transform: translatey(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translatey(0);
+    }
 }
