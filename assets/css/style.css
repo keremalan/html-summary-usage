@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+details {
+    display: inline;
+    margin-left: 3vw;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: row;
+}
